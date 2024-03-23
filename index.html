@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="dob">
+      <div class="box1">
+        <span class="sm">Day</span>
+        <input type="text" name="" value="DD" id="dd">
+      </div>
+      <div class="box1">
+        <span class="sm">Month</span>
+        <input type="text" name="" value="MM" id="mm">
+      </div>
+      <div class="box1">
+        <span class="sm">Year</span>
+        <input type="text" name="" value="YYYY" id="yyyy">
+      </div>
+    </div>
+    <hr>
+    <div class="search">
+      <img src="./assets/images/icon-arrow.svg" alt="">
+    </div>
+    <div class="result">
+        <h1><span id="year">--</span> years</h1>
+        <h1><span id="month">--</span> months</h1>
+        <h1><span id="day">--</span> days</h1>
+    </div>
+
+  </div>
+  <script>
+    var result=document.querySelectorAll("h1");
+    var search=document.querySelector(".search");
+    search.addEventListener("click",()=>{
+      var day=document.getElementById("dd").value;
+      var month=document.getElementById("mm").value;
+      var year=document.getElementById("yyyy").value;
+      var today=new Date();
+      // console.log(today);
+      var dob=new Date(`${year}-${month}-${day}`);
+      // console.log(dob);
+
+      var year=today.getFullYear()-dob.getFullYear();
+      var month=today.getMonth()-dob.getMonth();
+      var days=today.getDate()-dob.getDate();
+      if(month<0||(month===0 && today.getDate()<dob.getDate())){
+        year--;
+        month=12-dob.getMonth()-today.getMonth();
+      }
+      if(days<0){
+        month--;
+        var lastmonth=new Date(today.getFullYear(),today.getMonth()-1,0);
+        days=lastmonth.getDate()-dob.getDate()+today.getDate();
+
+      }
+
+// testing
+      // console.log(result);
+      // console.log(result[0].childNodes);
+      // console.log(result[0].childNodes[0].innerHTML=year);
+      // console.log(result[1].childNodes);
+      // console.log(result[1].childNodes[0].innerHTML=month);
+      // console.log(result[2].childNodes);
+      // console.log(result[2].childNodes[0].innerHTML=days);
+    
+        result[0].childNodes[0].innerHTML=year;
+       result[1].childNodes[0].innerHTML=month;
+       result[2].childNodes[0].innerHTML=days;
+
+       
+
+    })
+  
+
+
+
+  </script>
+
+  <!-- Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-primary-purple: hsl(259, 100%, 65%);
+    --clr-primary-lightred:hsl(0, 100%, 67%);
+    --clr-netural-white: hsl(0, 0%, 100%);
+    --clr-netural-offwhite: hsl(0, 0%, 94%);
+    --clr-netural-lightgrey: hsl(0, 0%, 86%);
+    --clr-smokeygrey: hsl(0, 1%, 44%);
+    --clr-offblack:hsl(0, 0%, 8%);
+}
+
+p{
+    font-size: 2rem;
+}
+
+  body{
+    width:100%;
+    height: 100vh;
+    background-color: var(--clr-netural-offwhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    width: 600px;
+    height: 450px;
+    border-radius: 1rem;
+    border-bottom-right-radius: 12rem;
+    background-color: var(--clr-netural-white);
+    position: relative;
+  }
+  .dob{
+    width: 100%;
+    height: 30%;
+    /* background-color: green; */
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,120px);
+    gap: 1rem;
+    justify-items: center;
+  }
+  .box1{
+    /* background-color: aqua; */
+  }
+  .sm{
+    font-size: 0.6rem;
+    font-weight:bold;
+    color:var(--clr-smokeygrey);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+  input[type="text"]{
+    width: 120px;
+    height: 50px;
+    border: 1px solid var(--clr-netural-offwhite);
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-weight: 800;
+    color:var(--clr-smokeygrey);
+    font-size: 1.2rem;
+  }
+  hr{
+    margin: 0 2rem;
+    margin-right: 8rem;
+    background-color: var(--clr-netural-white);
+
+  }
+  .search{
+    position: absolute;
+    background: var(--clr-primary-purple);
+    width: 70px;
+    padding: 1rem;
+    border-radius: 50%;
+    right: 70px;
+    top:100px;
+    cursor: pointer;
+
+  }
+  .search img{
+    max-width: 100%;
+  }
+.result{
+   
+    /* background-color: greenyellow; */
+    border-bottom-right-radius: 12rem;
+    display: grid;
+    grid-template-columns: 540px;
+    grid-template-rows: repeat(3,1fr);
+    margin: 0 2rem;
+    font-size: 1.8rem;
+    color: var(--clr-offblack);
+}
+.result >div{
+    display: flex;
+}
+h1 span{
+    color: var(--clr-primary-purple);
+}
