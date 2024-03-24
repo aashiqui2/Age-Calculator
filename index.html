@@ -16,25 +16,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <form action="">
   <div class="container">
     <div class="dob">
       <div class="box1">
         <span class="sm">Day</span>
-        <input type="text" name="" value="DD" id="dd">
+        <input type="text" name="" value="DD" id="dd" required>
       </div>
       <div class="box1">
         <span class="sm">Month</span>
-        <input type="text" name="" value="MM" id="mm">
+        <input type="text" name="" value="MM" id="mm" required>
       </div>
       <div class="box1">
         <span class="sm">Year</span>
-        <input type="text" name="" value="YYYY" id="yyyy">
+        <input type="text" name="" value="YYYY" id="yyyy" required>
       </div>
     </div>
     <hr>
-    <div class="search">
+    <button class="search" type="submit">
       <img src="./assets/images/icon-arrow.svg" alt="">
-    </div>
+    </button>
+  </form>
     <div class="result">
         <h1><span id="year">--</span> years</h1>
         <h1><span id="month">--</span> months</h1>

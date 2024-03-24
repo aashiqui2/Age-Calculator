@@ -71,6 +71,7 @@ p{
     font-weight: 800;
     color:var(--clr-smokeygrey);
     font-size: 1.2rem;
+    cursor: pointer;
   }
   hr{
     margin: 0 2rem;
@@ -87,7 +88,13 @@ p{
     right: 70px;
     top:100px;
     cursor: pointer;
+    outline: none;
+    border: 0px;
 
+
+  }
+  .search:hover{
+    background-color:var(--clr-offblack);
   }
   .search img{
     max-width: 100%;
